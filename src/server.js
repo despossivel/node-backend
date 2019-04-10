@@ -20,6 +20,8 @@ mongoose.connect('mongodb+srv://dev:dev@cluster0-pasu1.mongodb.net/test?retryWri
 });
 
 
+
+
 app.use((req, res, next)=>{
     req.io = io
 
