@@ -9,10 +9,7 @@ class FileController{
             path: req.file.key
         })
         box.files.push(file);
-
         await box.save();
-        //criar arquivo
-
         req.io.sockets.in(box._id).emit('file', file)
         
         return res.json(file)
